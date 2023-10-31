@@ -1,0 +1,58 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.79 (8238) aarch64-apple-darwin20]
+
+[History restored from /Users/meenakshialagusundaram/.Rapp.history]
+
+> x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+> result.mean <- mean(x)
+> print(result.mean)
+[1] 8.22
+> result.mean <- mean(x,trim = 0.3)
+> print(result.mean)
+[1] 5.55
+> x<- c(12,7,3,4.2,18,2,54,-21,8,-5,NA)
+> result.mean <- mean(x)
+> print(result.mean)
+[1] NA
+> result.mean <- mean(x,na.rm = TRUE)
+> print(result.mean)
+[1] 8.22
+> x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+> median.result<- median(x)
+> print(median.result)
+[1] 5.6
+> x <- seq(0,50,by=1)
+> y <- dbinom(x,50,0.5)
+> png(file = "dbinom.png")
+> plot(x,y)
+> dev.off()
+null device 
+          1 
+> x <- pbinom(26,51,0.5)
+> print(x)
+[1] 0.610116
+> x <- qbinom(0.25,51,1/2)
+> print(x)
+[1] 23
+> x<-rbinom(8,150,0.4)
+> print(x)
+[1] 58 65 62 54 59 50 69 57
+> 
